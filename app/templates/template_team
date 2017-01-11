@@ -1,0 +1,55 @@
+<div class="col-md-4">
+  <img class="img-circle" src="/static/img/team/nina.jpg" width="140" height="140">
+  <h2><font color="#f15500">Nina PORET</font></h2>
+  <h3><small>Assistante de communication</small></h3>
+  <p><font color="#f15500">Champs de compétences :</font></p>
+  <ul>
+    <li>Urbanisme </li>
+    <li>Méthodes participatives</li>
+  </ul>
+  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#nina">En détails&raquo;</button>
+</div>
+<div class="modal fade" id="nina" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color:#f15500">Nina PORET &nbsp&nbsp&nbsp<small>Assistante de communication </small></h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="img-circle" src="/static/img/team/martin.jpg" width="140" height="140">
+            </div>
+            <div class="col-md-8">
+              <p><font color="#f15500">Champs de compétences :</font></p>
+              <ul>
+                <li>Urbanisme </li>
+                <li>Méthodes participatives</li>
+              </ul>
+            </div>
+          </br></br>
+          <div class="col-md-12">
+            <p><font color="#f15500"><h4>Mon engagement dans S.E.E.D.</h4></font></p>
+            <p align="justify" style="color:#6E6E6E"></p>
+          </br>
+          <p><font color="#f15500"><h4>Expériences</h4></font></p>
+          <ul>
+            <li style="color:#6E6E6E"><p align="justify"><b>Assistante chargée de projet – ONG UrbaSEN – Projet « urbaDTK2 » : Appui à la reconstruction » (Sénégal) </b></p></li>
+                        <ul>
+              <li style="color:#6E6E6E" ><p align="justify">Mise en place d’un suivi de la reconstruction de l’habitat.</p></li>
+              <li style="color:#6E6E6E" ><p align="justify">Mise en place d’un suivi de l’épargne de groupements d’habitants pour la reconstruction de l’habitat.</p></li>
+              <li style="color:#6E6E6E" ><p align="justify">Rédaction de rapports d’activités auprès des bailleurs, réponses à des appels d’offres.</p></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

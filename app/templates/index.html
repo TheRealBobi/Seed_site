@@ -1,0 +1,375 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<script src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function juizScrollTo(element){     
+  $(element).click(function(){
+    var goscroll = false;
+    var regexfix = new RegExp("\/","");
+    var the_hash = $(this).attr("href").replace(regexfix,"");
+    var regex = new RegExp("\#(.*)","gi");
+    var the_element = '';
+
+    if(the_hash.match("\#(.+)")) {
+      the_hash = the_hash.replace(regex,"$1");
+
+      if($("#"+the_hash).length>0) {
+        the_element = "#" + the_hash;
+        goscroll = true;
+      }
+      else if($("a[name=" + the_hash + "]").length>0) {
+        the_element = "a[name=" + the_hash + "]";
+        goscroll = true;
+      }
+
+      if(goscroll) {
+        $('html, body').animate({
+          scrollTop:$(the_element).offset().top
+        }, 'slow');
+        return false;
+      }
+    }
+  });         
+};
+juizScrollTo('a[href^="/#"]');
+</script>
+
+<script>
+
+
+$(document).ready(function() {
+
+  $("#owl-example").owlCarousel({
+
+          autoPlay: 2000, //Set AutoPlay to 3 seconds
+
+          items : 5
+
+        });
+
+});
+
+</script>
+
+
+
+<div id="home" class="home">
+
+
+  <div class="text-vcenter">
+    S.E.E.D.&nbsp
+    <h3><font color="#f18611">S</font><font color="white">olidarity</font> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font color="#f18611">E</font><font color="white">quity</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <font color="#f18611">E</font><font color="white">mpowerment </font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font color="#f18611">D</font><font color="white">evelopment</font></h3>
+
+  </div>
+</div>
+
+<div id="about" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="/static/img/logo.png" alt="" />
+      </div>
+      <div class="col-sm-6 text-center" style="font-size:17px">
+        <h1 align="left"><font color="#f18611">S.E.E.D.</font></h1>
+        <p align="justify">En mars 2015, une organisation non gouvernementale de solidarité internationale voyait le jour à Lille, en Région Nord-Pas de Calais-Picardie, prenant pour nom S.E.E.D. (Solidarity, Equity, Empowerment and Development).</p>
+        <br/>
+        <p align="justify">Créée par un groupe de jeunes professionnels ayant la volonté de se mobiliser et d’agir ensemble autour de valeurs fortes, S.E.E.D se destine à l’amélioration du cadre de vie des populations vulnérables, à travers des projets aux objectifs pertinents, aux résultats qualitatifs et sur le long terme.</p>
+        <br/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="pad-section">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="text-center"><font color="white" size='12'>Notre Vision</font></h2> <hr />
+      <div class="col-sm-3 col-xs-6">
+       <img src="/static/img/icons/solidarity.png" alt="" />
+       <h4><b><font color="#f18611">S</font>olidarity</b></h4>
+       <p><b>Agir main dans la main avec des acteurs locaux dans une logique de collaboration et d’engagement d’égal à égal.</b></p>
+     </div>
+     <div class="col-sm-3 col-xs-6">
+      <img src="/static/img/icons/equal.png" alt="" />
+      <h4><b><font color="#f18611">E</font>quity</b></h4>
+      <p><b>Reconnaître, revendiquer et promouvoir les droits inhérents à tout être humain.</b></p>
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <img src="/static/img/icons/empowerment.png" alt="" />
+      <h4><b><font color="#f18611">E</font>mpowerment</b></h4>
+      <p><b>Donner à ceux qui en ont besoin les moyens d’améliorer leur cadre de vie.</b></p>
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <img src="/static/img/icons/development.png" alt="" />
+      <h4><b><font color="#f18611">D</font>evelopment</b></h4>
+      <p><b>Mettre au point des projets de qualité, ayant de réelles répercussions pour les populations ciblées sur le long terme.</b></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="presta" class="presta">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center"><font color="#ffffff" size='12'>Compétences</font></h2> <hr/>
+      <div class="col-sm-2 col-xs-4">
+        <img src="/static/img/icons/presta/education.png" alt="" />
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <br>
+        <b>&Eacute;ducation / formation</b> :
+        <ul>
+          <li>développpement personnel</li>
+          <li>sensibilisation du public</li>
+        </ul>
+      </div>
+      <div class="col-sm-2 col-xs-4"></div>
+      <div class="col-sm-2 col-xs-4">
+       <img src="/static/img/icons/presta/gestion.png" alt="" /> 
+     </div>
+     <div class="col-sm-3 col-xs-6">
+      <br>
+      <b>Gestion</b> : 
+      <ul>
+        <li>gestion financière</li>
+        <li>gestion de projets</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-xs-4">
+      <img src="/static/img/icons/presta/urbanisme.png" alt="" />
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <br>
+      <b>Urbanisme</b> : 
+      <ul>
+        <li>planification urbaine</li>
+        <li>génie civil</li>
+        <li>gestion des risques</li>
+      </ul>
+    </div>
+    <div class="col-sm-2 col-xs-4"></div>
+    <div class="col-sm-2 col-xs-4">
+      <img src="/static/img/icons/presta/juri.png" alt="" />
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <br>
+      <b>Sciences juridiques</b> : 
+      <ul>
+        <li>droits de l'Homme</li>
+        <li>coopération internationale</li>
+        <li>marchés publics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-xs-4">
+      <img src="/static/img/icons/presta/inno.png" alt="" />
+    </div>
+    <div class="col-sm-3 col-xs-6">
+      <br>
+      <b>Innovation</b> : <ul>
+      <li>nouvelles technologies</li>
+      <li>informatique</li>
+    </ul>
+  </div>
+  <div class="col-sm-2 col-xs-4"></div>
+  <div class="col-sm-2 col-xs-4">
+    <img src="/static/img/icons/presta/socio.png" alt="" />
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    <br>
+    <b>Sociologie</b> : <ul>
+    <li>sociologie urbaine</li>
+    <li>enquêtes participatives</li>
+    <li>mobilisation citoyenne</li>
+  </ul>
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<div id="projects" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center"><font color="#f18611" size='12'>Projets - Actualités</font></h2> <hr/>
+
+      {% for item in feed %}
+      <div class="col-sm-4 ">
+        <a href="{{ item.link }}" target="_blank"><h2 style="color:#949494">{{ item.title }}</h2></a><br/>
+        {{item.description[:500].split("<h1>")[0]|safe}}
+        <a href="{{ item.link }}" target="_blank">suite</a>
+        {{ getImg[loop.index-1]|safe }}
+
+      </div>
+      {% endfor %}
+    </div>
+  </div> 
+</div>
+
+
+<div id="partners" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center"><font color="#f18611" size='12'>Partenaires</font></h2> <hr/>
+      <div id="owl-example" class="owl-carousel">
+        <div class="item">
+          <a href="/otromodo"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/otromodo.png" alt=""/></a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="hhttp://uncadeaupourlaterre.org/"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/BB.jpg" alt=""/></a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="http://www.unicaen.fr/recherche/mrsh/idees-caen"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/idees-caen.gif "alt=""/></a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="http://tacloban.gov.ph/"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/Tacloban.jpeg" alt=""/></a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="http://www.fondation-abbe-pierre.fr/"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/logo_fond_ap.png" alt=""/></a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="http://www.upalbatre.org/"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/UP.png" alt=""/></a>
+        </div>
+        <div class="item">
+          <a target="_blank" href="http://www.capsolidarites.asso.fr/"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/logo_cap.jpg" alt=""/></a>
+        </div>
+
+        <div class="item">
+          <a target="_blank" href="http://mde-lille.fr/-Developpement-de-projets-"><img class="img-thumbnail img-responsive" src="/static/img/partenaires/logo_clap.jpeg" alt=""/></a>
+        </div>
+
+        <div class="item">
+          <a target="_blank" href="https://www.facebook.com/mdalille/"><img class="img-thumbnail img-responsive"  src="/static/img/partenaires/mda_logo.jpg" alt=""/></a>
+        </div>
+      </div> 
+    </div> 
+  </div>
+</div>
+
+
+
+<div id="join" class="pad-section">
+  <div class="container">
+
+    <div class="row">
+      <h2 class="text-center"><font color="white" size='12'>Nous rejoindre</font></h2> <hr/>
+      <div class="col-sm-6">
+        <!-- Single button -->
+        <h3>Accéder à la newsletter</h3>
+        <b>et rester informé des dernières actualités de S.E.E.D.</b><br/><br/>
+        <a href="/static/newsletter_1.pdf"><button type="button" class="btn btn-primary">Newsletter</button></a>
+      </div>
+      <div class="col-sm-6">
+        <h3>Rejoindre S.E.E.D.</h3>
+        <p align="justify"><b>Si la vision, les valeurs et les projets de S.E.E.D. vous intéressent, joignez vous à nous pour cette aventure en suivant le lien ci dessous!</b><p>
+          <br/>
+          <div class="col-sm-4">
+            <a target="_blank" href="https://www.helloasso.com/associations/s-e-e-d-solidarity-equity-empowerment-and-development/adhesions/adhesion-s-e-e-d-2016"><button type="button" class="btn btn-primary">Nous rejoindre</button></a>
+          </div>
+          <div class="col-sm-2">
+            <a target="_blank" href="https://www.helloasso.com/don/associations/s-e-e-d-solidarity-equity-empowerment-and-development"><button type="button" class="btn btn-primary">Faire un don</button></a>
+          </div>
+          <br/><br/><br/><br/>
+          <div class="col-sm-2">
+            <img src="/static/img/icons/piggy.png" alt="" />
+          </div>
+          <b>Tarif adhésion personnes en activité : 15€</b>
+          <br/>
+          <b>Tarif adhésion étudiants, demandeurs d’emplois : 10€<b/>
+            <br/><br/>
+          </div>
+          <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6">
+
+              <div class="col-sm-2">
+                <br/><br/>
+                <img src="/static/img/icons/pin56.png" alt="" />
+              </div>
+              <br/><br/>
+              Adresse d’envoi :<br/>
+              Association S.E.E.D.<br/>
+              2 rue de Roubaix, 59800 Lille
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="pad-section">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center"><font color="#ffffff" size='12'>Contact</font></h2> <hr />
+          <div class="col-md-4">
+            <form>
+              <legend color=""><i class="glyphicon glyphicon-globe white"></i><font color="white">  Adresse - Email</font></legend>
+              <address>
+              </span><strong>Association  <font color="#ffffff" >S.E.E.D.</font> </strong>
+              <br> 2 rue de Roubaix
+              <br>59800 Lille
+              <br>
+
+            </address>
+
+            <address>
+              <strong>Email S.E.E.D.</strong>
+              <br>
+              <i class="glyphicon glyphicon-envelope white"></i><a href="mailto:#" color="white"> contact@ongseed.fr</a>
+            </address>
+          </form>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2">
+          <img src="/static/img/icons/checkbook_white.png" alt="" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="follow" class="pad-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6">
+        </div>
+        <div class="col-sm-12">
+          <h2 class="text-center"><font color="white" size='12'>  Follow</font></h2> 
+          <div class="col-md-6 col-sm-2">
+          </div> 
+          <div class="col-md-2 col-sm-3 social">
+           <a target="_blank" href="https://www.facebook.com/SEEDSolidarityEquityEmpowementDevelopment?fref=ts"><svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" >
+            <path fill="#343434" id="facebook" d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/>
+          </svg></a> 
+        </div>
+        <div class="col-md-2 col-sm-3">
+         <a target="_blank" href="https://twitter.com/seed_ong"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="#343434" id="twitter"d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg></a> 
+       </div>  
+       <div class="col-md-2 col-sm-3">
+         <a target="_blank" href="https://plus.google.com/116023377989811733905"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g><path fill="#343434" id="google" d="M5.09 7.273v1.745H7.98c-.116.75-.873 2.197-2.887 2.197-1.737 0-3.155-1.44-3.155-3.215S3.353 4.785 5.09 4.785c.99 0 1.652.422 2.03.786l1.382-1.33c-.887-.83-2.037-1.33-3.41-1.33C2.275 2.91 0 5.184 0 8s2.276 5.09 5.09 5.09c2.94 0 4.888-2.065 4.888-4.974 0-.334-.036-.59-.08-.843H5.09zM16 7.273h-1.455V5.818H13.09v1.455h-1.454v1.454h1.455v1.455h1.455V8.727H16"/></g></svg></a> 
+       </div>      
+
+
+     </div>
+   </div>
+   <div class="row text-center">
+     <br/><br/><br/><br/><br/><br/><br/><br/>
+   </div>
+ </div>
+ <br/>
+ <p class="text-right">S.E.E.D.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Icons from <a  style="color: white;" target="_blank" href="https://simpleicons.org/">simpleicons</a>, <a  style="color: white;" target="_blank" href="http://www.defaulticon.com/">defaulticon</a> and <a  style="color: white;" target="_blank" href="http://glyphicons.com/">glyphicons</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</div>
+
+{% endblock %}
+
