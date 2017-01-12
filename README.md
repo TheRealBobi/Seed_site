@@ -5,3 +5,5 @@ Installation flask local:
  - ensuite :`source myenv/bin/activate `
  - `pip install -r requirements.pip`
  - `myenv/bin/python2 app/seed.py `  
+ 
+ Le main.py est simplement une copie de seed.py. Le main.py est destiné à la prod
