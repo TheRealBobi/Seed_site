@@ -14,7 +14,7 @@ const iconSociology = require('../assets/icons/icon-sociology.png');
  */
 const Skills = () => (
   <div className="bg-blue pv4 white">
-    <Title2 text="Compétences" />
+    <Title2 text="Compétences" color="white" />
 
     <div className="flex flex-wrap justify-around">
       <div className="flex mv1 w-90 w-40-m w-30-l">

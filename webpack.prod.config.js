@@ -22,7 +22,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.pug$/, loader: 'pug-html-loader' },
+      { test: /\.html$/, loader: 'html-loader' },
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
         test: /\.css$/,
@@ -41,7 +41,7 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin({ filename: '[name].css', disable: false, allChunks: true }),
-    new HtmlWebpackPlugin({ template: 'app.pug', filename: 'index.html' }),
+    new HtmlWebpackPlugin({ template: 'index.html' }),
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify('production') },
     }),

@@ -19,7 +19,7 @@ const Landing = () => (
 
     {/* ---------- TITLE SECTION ---------- */}
     <div
-      className="cover white bg-center tc h-75 flex flex-column justify-center"
+      className="cover white bg-center tc vh-50 flex flex-column justify-center"
       style={{ backgroundImage: `url(${titleBackUrl})` }}
     >
       <h1 className="f-headline orange ma0 mb5">S.E.E.D.</h1>
@@ -68,7 +68,7 @@ const Landing = () => (
 
     {/* ---------- CONTACT SECTION ---------- */}
     <div className="white bg-orange pa4">
-      <Title2 text="Contact" />
+      <Title2 text="Contact" color="white" />
 
       <div className="flex flex-wrap justify-around w-90-m w-70-l" style={{ margin: 'auto' }}>
         <div className="mh2">
